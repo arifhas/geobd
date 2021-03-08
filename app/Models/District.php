@@ -14,8 +14,8 @@ class District extends Model
         return $this->belongsTo(Division::class);
     }
 
-    public function upazilas()
+    public function thanas()
     {
-        return $this->hasMany(Upazila::class, 'district_id');
+        return $this->hasMany(Thana::class, 'district_id');
     }
 }

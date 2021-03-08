@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUpazilasTable extends Migration
+class CreateThanasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateUpazilasTable extends Migration
      */
     public function up()
     {
-        Schema::create('upazilas', function (Blueprint $table) {
+        Schema::create('thanas', function (Blueprint $table) {
             $table->id();
             $table->string('name', 30);
             $table->string('bn_name', 50)->nullable();
@@ -30,10 +30,10 @@ class CreateUpazilasTable extends Migration
      */
     public function down()
     {
-        Schema::table('upazilas', function (Blueprint $table) {
-            $table->dropForeign('upazilas_district_id_foreign');
+        Schema::table('thanas', function (Blueprint $table) {
+            $table->dropForeign('thanas_district_id_foreign');
         });
 
-        Schema::dropIfExists('upazilas');
+        Schema::dropIfExists('thanas');
     }
 }

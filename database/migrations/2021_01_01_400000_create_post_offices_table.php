@@ -19,7 +19,7 @@ class CreatePostOfficesTable extends Migration
             $table->string('name', 30);
             $table->string('bn_name', 50)->nullable();
             $table->string('code', 10);
-            $table->foreignId('upazila_id')->constrained();
+            $table->foreignId('thana_id')->constrained();
             $table->timestamps();
         });
     }
@@ -32,7 +32,7 @@ class CreatePostOfficesTable extends Migration
     public function down()
     {
         Schema::table('post_offices', function (Blueprint $table) {
-            $table->dropForeign('post_offices_upazila_id_foreign');
+            $table->dropForeign('post_offices_thana_id_foreign');
         });
 
         Schema::dropIfExists('post_offices');

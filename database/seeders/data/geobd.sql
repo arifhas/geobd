@@ -113,10 +113,10 @@ INSERT INTO `districts` (`division_id`, `name`, `bn_name`, `lat`, `lng`, `websit
 -- --------------------------------------------------------
 
 --
--- Dumping data for table `upazilas`
+-- Dumping data for table `thanas`
 --
 
-INSERT INTO `upazilas` (`district_id`, `name`, `bn_name`, `created_at`, `updated_at`) VALUES
+INSERT INTO `thanas` (`district_id`, `name`, `bn_name`, `created_at`, `updated_at`) VALUES
 (34, 'Amtali', 'আমতলী', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (34, 'Bamna', 'বামনা', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (34, 'Barguna Sadar', 'বরগুনা সদর', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -725,9 +725,9 @@ ALTER TABLE `districts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `upazilas`
+-- Indexes for table `thanas`
 --
-ALTER TABLE `upazilas`
+ALTER TABLE `thanas`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -747,9 +747,9 @@ ALTER TABLE `districts`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT for table `upazilas`
+-- AUTO_INCREMENT for table `thanas`
 --
-ALTER TABLE `upazilas`
+ALTER TABLE `thanas`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=595;
 COMMIT;
 

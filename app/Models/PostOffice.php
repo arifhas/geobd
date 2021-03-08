@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class PostOffice extends Model
 {
 
-    protected $fillable = ['name', 'bn_name', 'code', 'upazila_id'];
+    protected $fillable = ['name', 'bn_name', 'code', 'thana_id'];
 
-    public function upazila()
+    public function thana()
     {
-        return $this->belongsTo(Upazila::class, 'upazila_id');
+        return $this->belongsTo(Thana::class, 'thana_id');
     }
 }
