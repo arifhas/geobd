@@ -18,11 +18,13 @@ class GeoSeeder extends Seeder
      */
     public function run()
     {
-        if(Division::count() == 0) {
-            $this->loadFromSQL();
-        } else if(PostOffice::count() == 0) {
-            $this->loadFromCSV();
-        }
+        // if(Division::count() == 0) {
+        //     $this->loadFromSQL();
+        // } else if(PostOffice::count() == 0) {
+        //     $this->loadFromCSV();
+        // }
+
+        $this->loadFromCSV();
     }
 
     public function loadFromSQL()
